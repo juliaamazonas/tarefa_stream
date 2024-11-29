@@ -28,9 +28,8 @@ public class Main {
             }
         }
 
-        List<Pessoa> mulheres = pessoas.stream()
-                .filter(pessoa -> pessoa.getGenero().equalsIgnoreCase("feminino"))
-                .collect(Collectors.toList());
+        List<Pessoa> mulheres = FiltragemGenero.filtrarPorGeneroFeminino(pessoas);
+
 
         System.out.println("Lista de mulheres: ");
         mulheres.forEach(mulher -> System.out.println(mulher.getNome()));
